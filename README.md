@@ -1,7 +1,5 @@
 # readme-generator
-
-Last updated on: 16th Feb 2023. Last updated by: Shohidul Shah Hoque
-__________
+Last updated on: 21st Feb 2023. Last updated by: Shohidul Shah Hoque
 
 This should include
 - what the app is for
@@ -14,6 +12,8 @@ When a user is prompted for information about the application repository then a 
 - The title of my project
     - When a user enters the project title then it is displayed as the title of the README
 
+
+
     Sections entitled:
       - Description 
       - Table of Contents 
@@ -25,8 +25,6 @@ When a user is prompted for information about the application repository then a 
       - Questions
           - github
           - email
-
-
 
 ## Description
 

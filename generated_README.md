@@ -1,11 +1,11 @@
 
-# testing project name
+# test app name
 
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description 
-test
+This is an example description for this app
 
 ## Table of Contents
 1. [Installation](#Installation)
@@ -15,18 +15,18 @@ test
 5. [Questions](#Questions)
 
 ## Installation
-test
+The user will need to get the application's dependencies and then run 'node index.js' in the terminal
 
 ## Usage
-test
+Run the application via a terminal
 
 ## Contribution
-test
+No contribution
 
 ## Tests
-test
+To test the application...
 
 ## Questions
-GitHub: wwww.github.com/test 
+GitHub: wwww.github.com/exampleGithubUsername 
 
-For any questions, you can reach out on test
+For any questions, you can reach out on example@email.com

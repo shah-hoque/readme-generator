@@ -12,12 +12,12 @@ const askQuestions = () => {
     inquirer.prompt([
         {
             name: "title",
-            message: "What is the title of your project? \n",
+            message: "What is the title of your application? \n",
             type:"input",
         },
         {
             name: "description",
-            message: "Write a description for your project: \n",
+            message: "Write a description for your application: \n",
             type:"input",
         },
         {
@@ -32,7 +32,7 @@ const askQuestions = () => {
         },
         {
             name: "license",
-            message: "Choose the license for this project using the arrow keys then press enter \n",
+            message: "Choose the license for this application using the arrow keys then press enter \n",
             type:"list",
             choices: [
                 "None",
@@ -48,7 +48,7 @@ const askQuestions = () => {
         },
         {
             name: "contribution",
-            message: "Mention anyone else who contributed to this project (if any): \n",
+            message: "Mention anyone else who contributed to this application (if any): \n",
             type:"input",
         },
         {
