@@ -24,7 +24,7 @@ const askQuestions = () => {
 
 // FUNC) THAT USES A PROMISE FUNC THAT TAKES IN THE TYPE OF FILE TO CREATE & THE FILE CONTENT
 const writeToFile = answers => {
-    fsWriteFilePromisified('README.md', writeMarkdown(answers))
+    fsWriteFilePromisified('generated_README.md', writeMarkdown(answers))
 }
 
 
