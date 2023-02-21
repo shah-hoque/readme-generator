@@ -7,7 +7,7 @@ const util = require('util');
 const fsWriteFilePromisified = util.promisify(fs.writeFile)
 
 
-// FUNC) THAT PROMPTS THE USER & DIRECTS TO WRITE RESPONSE TO FILE USING A PROMISE FUNC
+// FUNC) THAT PROMPTS THE USER & WRITES RESPONSE TO FILE USING A PROMISE FUNC
 const askQuestions = () => {
     inquirer.prompt([
         {
@@ -67,16 +67,12 @@ const askQuestions = () => {
             type:"input",
         },
     ]).then(answers => {
-        writeToFile(answers)
+        // pass into this promise func the type of file to create & its file content
+        fsWriteFilePromisified('generated_README.md', writeMarkdown(answers))
         console.log('Your README file has been generated')
+
     }).catch((err) => console.error(err));
 };
-
-
-// FUNC) THAT USES A PROMISE FUNC THAT TAKES IN THE TYPE OF FILE TO CREATE & THE FILE CONTENT
-const writeToFile = answers => {
-    fsWriteFilePromisified('generated_README.md', writeMarkdown(answers))
-}
 
 
 // FUNC) THAT POPULATES THE TEXT THAT WILL BE PASSED TO fsWriteFilePromisified
