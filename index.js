@@ -30,6 +30,23 @@ const askQuestions = () => {
             message: 'Write how users should use your application: \n',
             type:"input",
         },
+        {
+            name: "license",
+            message: "Choose the license for this project using the arrow keys then press enter \n",
+            type:"list",
+            choices: [
+                "None",
+
+                "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
+
+                "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)", 
+
+                "[![License: Artistic-2.0](https://img.shields.io/badge/License-Artistic%202.0-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)", 
+
+                "[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)"
+                ],
+        },
+        
     ]).then(answers => {
         writeToFile(answers)
         console.log('Your README file has been generated')
@@ -57,6 +74,9 @@ ${answers.installation}
 
 ## Usage
 ${answers.usage}
+
+## License
+${answers.license}
 
 
 
