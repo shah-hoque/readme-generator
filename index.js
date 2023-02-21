@@ -17,17 +17,17 @@ const askQuestions = () => {
         },
         {
             name: "description",
-            message: 'Write a description for your project: \n',
+            message: "Write a description for your project: \n",
             type:"input",
         },
         {
             name: "installation",
-            message: 'Write instructions users need to follow to run your application (if any): \n',
+            message: "Write instructions users need to follow to run your application (if any): \n",
             type:"input",
         },
         {
             name: "usage",
-            message: 'Write how users should use your application: \n',
+            message: "Write how users should use your application: \n",
             type:"input",
         },
         {
@@ -45,6 +45,16 @@ const askQuestions = () => {
 
                 "[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)"
                 ],
+        },
+        {
+            name: "contributing",
+            message: "Mention anyone else who contributed to this project (if any): \n",
+            type:"input",
+        },
+        {
+            name: "tests",
+            message: "Explain how to test your application: \n",
+            type:"input",
         },
         
     ]).then(answers => {
@@ -77,6 +87,12 @@ ${answers.usage}
 
 ## License
 ${answers.license}
+
+## Contributing
+${answers.contributing}
+
+## Tests
+${answers.tests}
 
 
 
