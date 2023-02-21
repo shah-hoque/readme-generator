@@ -66,7 +66,6 @@ const askQuestions = () => {
             message: "What is your email address? \n",
             type:"input",
         },
-        
     ]).then(answers => {
         writeToFile(answers)
         console.log('Your README file has been generated')
@@ -113,7 +112,6 @@ ${answers.tests}
 ## Questions
 GitHub: wwww.github.com/${answers.github} \n
 For any questions, you can reach out on ${answers.email}
-
 `;
 }
 
