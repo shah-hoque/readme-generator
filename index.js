@@ -47,7 +47,7 @@ const askQuestions = () => {
                 ],
         },
         {
-            name: "contributing",
+            name: "contribution",
             message: "Mention anyone else who contributed to this project (if any): \n",
             type:"input",
         },
@@ -59,11 +59,6 @@ const askQuestions = () => {
         {
             name: "github",
             message: "What is your GitHub username? \n",
-            type:"input",
-        },
-        {
-            name: "linkedIn",
-            message: "What is your linkedIn username? \n",
             type:"input",
         },
         {
@@ -88,14 +83,20 @@ const writeToFile = answers => {
 // FUNC) THAT POPULATES THE TEXT THAT WILL BE PASSED TO fsWriteFilePromisified
 function writeMarkdown(answers) {
 return  `
+# ${answers.title}
+
 ## License
 ${answers.license}
 
-## Title
-${answers.title}
-
 ## Description 
 ${answers.description}
+
+## Table of Contents
+1. [Installation](#Installation)
+2. [Usage](#Usage)
+3. [Contribution](#Contribution)
+4. [Tests](#Tests)
+5. [Questions](#Questions)
 
 ## Installation
 ${answers.installation}
@@ -103,23 +104,15 @@ ${answers.installation}
 ## Usage
 ${answers.usage}
 
-## Contributing
-${answers.contributing}
+## Contribution
+${answers.contribution}
 
 ## Tests
 ${answers.tests}
 
 ## Questions
-${answers.github}
-${answers.linkedIn}
-${answers.email}
-
-
-
-
-
-
-
+GitHub: wwww.github.com/${answers.github} \n
+For any questions, you can reach out on ${answers.email}
 
 `;
 }
