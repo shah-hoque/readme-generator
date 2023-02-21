@@ -11,8 +11,23 @@ const fsWriteFilePromisified = util.promisify(fs.writeFile)
 const askQuestions = () => {
     inquirer.prompt([
         {
-            name: "Title",
-            message: "What is the title of your project?",
+            name: "title",
+            message: "What is the title of your project? \n",
+            type:"input",
+        },
+        {
+            name: "description",
+            message: 'Write a description for your project: \n',
+            type:"input",
+        },
+        {
+            name: "installation",
+            message: 'Write instructions users need to follow to run your application (if any): \n',
+            type:"input",
+        },
+        {
+            name: "usage",
+            message: 'Write how users should use your application: \n',
             type:"input",
         },
     ]).then(answers => {
@@ -32,7 +47,24 @@ const writeToFile = answers => {
 function writeMarkdown(answers) {
 return  `
 ## Title
-${answers.Title}
+${answers.title}
+
+## Description 
+${answers.description}
+
+## Installation
+${answers.installation}
+
+## Usage
+${answers.usage}
+
+
+
+
+
+
+
+
 `;
 }
 
