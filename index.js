@@ -56,6 +56,21 @@ const askQuestions = () => {
             message: "Explain how to test your application: \n",
             type:"input",
         },
+        {
+            name: "github",
+            message: "What is your GitHub username? \n",
+            type:"input",
+        },
+        {
+            name: "linkedIn",
+            message: "What is your linkedIn username? \n",
+            type:"input",
+        },
+        {
+            name: "email",
+            message: "What is your email address? \n",
+            type:"input",
+        },
         
     ]).then(answers => {
         writeToFile(answers)
@@ -73,6 +88,9 @@ const writeToFile = answers => {
 // FUNC) THAT POPULATES THE TEXT THAT WILL BE PASSED TO fsWriteFilePromisified
 function writeMarkdown(answers) {
 return  `
+## License
+${answers.license}
+
 ## Title
 ${answers.title}
 
@@ -85,14 +103,16 @@ ${answers.installation}
 ## Usage
 ${answers.usage}
 
-## License
-${answers.license}
-
 ## Contributing
 ${answers.contributing}
 
 ## Tests
 ${answers.tests}
+
+## Questions
+${answers.github}
+${answers.linkedIn}
+${answers.email}
 
 
 
