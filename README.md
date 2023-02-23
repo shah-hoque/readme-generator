@@ -1,5 +1,5 @@
 # readme-generator
-Last updated on: 22nd Feb 2023. Last updated by: Shohidul Shah Hoque
+Last updated on: 23rd Feb 2023. Last updated by: Shohidul Shah Hoque
 
 ## Description
 This application can be deployed via a command-line interface, where the user will be presented with a series of prompts. The response will be used to populate a README file that the user can use for their new application.
@@ -33,7 +33,7 @@ For continued use, only step 4 is required which will overwrite the generated RE
 The application can only be used on a computer that has a command-line interface
 
 ## Application deployed
-![screenshot of the application being run on the terminal](screenshot.png)
+![screenshot of the application being run on the terminal](/miscellaneous/screenshot.png)
 
 ## Credits
 Author: Shohidul Shah Hoque
